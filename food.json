@@ -1,6 +1,6 @@
 [
   {
-    "food": "breakfast",
+    "type": "breakfast",
     "items": [
       { "food": "waffles", "price": 3.5 },
       { "food": "biscuits & gravy", "price": 4.5 },
@@ -8,7 +8,7 @@
     ]
   },
   {
-    "food": "lunch",
+    "type": "lunch",
     "items": [
       { "food": "sandwich", "price": 4.75 },
       { "food": "soup", "price": 3.75 },
@@ -16,7 +16,7 @@
     ]
   },
   {
-    "food": "dinner",
+    "type": "dinner",
     "items": [
       { "food": "steak", "price": 9.99 },
       { "food": "fish", "price": 7.99 },
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "food": "dessert",
+    "type": "dessert",
     "items": [
       { "food": "ice cream", "price": 5.0 },
       { "food": "pie", "price": 6.0 },

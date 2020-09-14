@@ -21,21 +21,26 @@ fetch("food.json")
   .catch((error) => console.log(error));
 
 const displayFood = (data) => {
-  data.forEach((food) => {
-    const { food: content, items } = food;
-    const meal = menus.find((el) => el.id.includes(content));
+  data.forEach((option) => {
+    const { type, items } = option;
+    const meal = menus.find((el) => el.id.includes(type));
     items.forEach((item) => {
       const { food, price } = item;
-      const pTag = document.createElement("p");
-      pTag.innerText = `${titleCase(food)} - $${parseFloat(price).toFixed(2)}`;
-      meal.appendChild(pTag);
+      const div = document.createElement("div");
+      const cooking = document.createElement("p");
+      cooking.innerText = titleCase(food);
+      const amount = document.createElement("p");
+      amount.innerText = `$${parseFloat(price).toFixed(2)}`;
+      div.append(cooking, amount);
+      div.classList.add("display-items");
+      meal.appendChild(div);
     });
   });
 };
 
 const titleCase = (str) => {
-  var strAr = str.toLowerCase().split(" ");
-  for (var i = 0; i < strAr.length; i++) {
+  let strAr = str.toLowerCase().split(" ");
+  for (let i = 0; i < strAr.length; i++) {
     strAr[i] = strAr[i].charAt(0).toUpperCase() + strAr[i].slice(1);
   }
   return strAr.join(" ");

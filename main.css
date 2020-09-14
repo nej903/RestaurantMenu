@@ -76,6 +76,20 @@ a {
   width: 80%;
 }
 
+.display-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.display-items:hover,
+li:hover,
+h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 #breakfast {
   background-color: yellow;
 }
