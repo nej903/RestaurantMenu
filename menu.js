@@ -15,6 +15,9 @@ const showMenu = (el) => {
   menuItem.classList.toggle("active");
 };
 
+//sudo npm i -g serve
+// serve
+// this allows use of fetch func on local files
 fetch("food.json")
   .then((response) => response.json())
   .then((data) => displayFood(data))
