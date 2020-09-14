@@ -7,11 +7,12 @@
 }
 
 .menu {
-  background-color: hotpink;
+  /* background-color: hotpink; */
   width: 800px;
   height: 60%;
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
 }
 
 body {
@@ -19,6 +20,11 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(
+    to bottom right,
+    rgb(81, 236, 165),
+    rgb(12, 52, 2)
+  );
 }
 
 img {
@@ -44,8 +50,9 @@ a {
 }
 
 .submenus {
-  height: 10%;
+  height: 20%;
   padding: 2%;
+  border: solid 2px rgb(47, 142, 238);
 }
 
 .center {
@@ -84,18 +91,37 @@ a {
 }
 
 .display-items:hover,
-li:hover,
+a:hover,
 h3:hover {
   cursor: pointer;
   text-decoration: underline;
+  color: white;
 }
 
-#breakfast {
+.menus > div,
+.menu {
+  border-radius: 5px;
+}
+
+.menus > div,
+.submenus {
+  background: linear-gradient(to right, rgb(47, 142, 238), rgb(20, 97, 236));
+}
+
+.menus > div {
+  border: solid 2px rgb(20, 97, 236);
+}
+
+/* #breakfast {
   background-color: yellow;
 }
 
 #lunch {
-  background-color: skyblue;
+  background: linear-gradient(
+    to bottom right,
+    rgb(220, 145, 74),
+    rgb(1, 51, 154)
+  );
 }
 
 #dinner {
@@ -104,4 +130,4 @@ h3:hover {
 
 #dessert {
   background-color: red;
-}
+} */
